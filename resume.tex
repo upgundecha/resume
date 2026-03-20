@@ -1,0 +1,299 @@
+%-------------------------
+% Resume in Latex
+% Author : Unmesh Gundecha
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{multicol}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Custom list environment for zero space
+\newlist{compactitemize}{itemize}{1}
+\setlist[compactitemize]{
+    label=\textbullet,
+    nosep,           % Removes all vertical spacing
+    leftmargin=1.5em,
+    rightmargin=0pt,
+    before=\vspace{-1.5\baselineskip}, % Adjust based on needs
+    after=\vspace{-0.5\baselineskip}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Unmesh Gundecha} \\ \vspace{1pt}
+    \small PHONESECTIONPLACEHOLDER\href{mailto:contact@sajalsharma.com}{\underline{upgundecha@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/upgundecha}{\underline{linkedin.com/in/upgundecha}} $|$
+    \href{https://github.com/upgundecha}{\underline{github.com/upgundecha}}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Platform Engineering leader with 20+ years of experience building large-scale developer platforms, cloud infrastructure, and DevOps ecosystems for global financial institutions. Currently leading multi-cloud platform engineering at Standard Chartered Bank, enabling secure, compliant cloud adoption across 15+ markets and powering digital, data, and AI workloads.}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Head, Platform Engineering}{Oct 2024 -- Present}
+    {Standard Chartered Bank}{Singapore}
+    \resumeItemListStart
+      \resumeItem{Own engineering execution of enterprise cloud platform (AWS, Azure, Databricks) supporting core banking, payments, AI and analytics workloads across 15+ markets.}
+      \resumeItem{Implemented multi-cloud landing zones enabling secure, compliant deployment of Tier-1 workloads with standardized identity, networking, observability, and governance controls.}
+      \resumeItem{Built internal developer platforms providing self-service infrastructure (IaC, Kubernetes, databases, networking), reducing application onboarding from weeks to hours while maintaining regulatory guardrails.}
+      \resumeItem{Established engineering excellence and reliability scorecards, improving CI/CD stability, release quality, and production resilience across the application estate.}
+      \resumeItem{Implemented FinOps and capacity optimisation, delivering multi-million USD annual savings through intelligent workload placement, autoscaling, and reserved capacity strategies.}
+      \resumeItem{Implemented AI-assisted engineering (internal cloud and DevOps copilots) to improve developer productivity, compliance adherence, and incident troubleshooting. }
+    \resumeItemListEnd
+    
+    \resumeSubheading
+    {Technology Lead – CI/CD \& Developer Platforms}{Nov 2021 -- Oct 2024}
+    {Standard Chartered Bank}{Singapore}
+    \resumeItemListStart
+        \resumeItem{Led one of the largest Azure DevOps enterprise implementations globally, supporting 1,200+ business applications, 35K+ repositories, and 60K+ users.}
+        \resumeItem{Consolidated fragmented CI/CD tooling, reducing operational complexity and achieving ~35\% reduction in platform operating costs.}
+        \resumeItem{Embedded security, risk, and compliance controls by design into pipelines, enabling secure-by-default software delivery across global teams.}
+        \resumeItem{Built custom platform extensions and automation using Python, JavaScript, React, and Node.js for onboarding, RBAC, policy enforcement, and release validation.}
+        \resumeItem{Implemented an AI-driven engineering copilot integrated with enterprise knowledge bases, delivering measurable improvements in developer productivity and issue resolution.}
+        \resumeItem{As a product owner, led the pilot and onboarding of GitHub Copilot for 3K users in the bank.}
+    \resumeItemListEnd
+  
+    \resumeSubheading
+      {Head, DevSecOps \& Automation}{Aug 2018 -- Oct 2021}
+      {Standard Chartered Bank}{Singapore}
+      \resumeItemListStart
+        \resumeItem{Led DevSecOps \& SRE transformation across 200+ applications, improving uptime, observability, and operational maturity.}
+        \resumeItem{Introduced reliability engineering practices that reduced operational toil and improved incident response effectiveness.}
+        \resumeItem{Played a key engineering leadership role in the delivery of digital and virtual banking platforms in Singapore and Hong Kong.}
+        \resumeItem{Established enterprise DevSecOps standards integrating security scanning, compliance controls, and automated policy enforcement across CI/CD pipelines.}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Vice President – Portfolio Lead, DevOps \& Automation}{Sept 2013 -- Aug 2018}
+      {Barclays}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Led DevOps transformation for central compliance and legal technology platforms, reducing end-to-end delivery cycles from 12 weeks to 4 weeks.}
+        \resumeItem{Led global DevOps and automation strategy for Barclaycard, delivering £2M+ annual savings through efficiency gains, tooling rationalisation, and vendor optimisation.}
+        \resumeItem{Established shared engineering platforms to improve reuse, transparency, and delivery consistency across teams}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Head of Quality Engineering}{Oct 2006 -- Sept 2013}
+      {SunGard}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Led the Quality Engineering team for SunGard Adaptive, a premier market and risk management solution in the financial services industry.}
+        \resumeItem{Defined and implemented QA automation framework, tools, test automation strategies, and release quality gates across a complex financial software estate.}
+        \resumeItem{Drove adoption of automated testing practices, significantly reducing regression cycles and improving release confidence.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Earlier Career}{2003 -- 2006}
+      {}{Pune, India}
+      \resumeItemListStart
+        \resumeItem{Tech Lead at VeriSoft Info Systems and Software Developer at WorldNet Technologies — led development of travel booking and point-of-sale retail applications, managing full SDLC across both roles.}
+    \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Developed a game in Java to test the generated dungeons}
+    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+    %   \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {The University of Texas at Austin - Texas McCombs School of Business}{Distance Education}
+    {Post Graduate Program – AI \& Machine Learning (Business Applications)}{Jun 2024 -- Apr 2025}
+    \resumeSubheading
+      {The University of Pune}{Pune, India}
+      {Master of Computer Management, Major in Software Engineering}{Jun 2000 -- May 2002}
+    \resumeSubheading
+      {The University of Pune}{Pune, India}
+      {Bachelor of Commerce}{Jun 1997 -- May 2000}
+    \resumeSubheading
+     {NIIT}{Pune, India}
+     {Programmed Network Computing Diploma (GNIIT)}{Jun 1997 -- Jun 1999}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Programming}{: Java, Python, JavaScript} \\
+    \textbf{Development}{: Spring Boot, Express.js, React.js, HTML/CSS, REST, GraphQL, SQL, PostgreSQL, MSSQL} \\
+     \textbf{Applied AI}{: Azure OpenAI, RAG, Multi-Agent Systems, AI Agents, Vector Databases, Langchain, Prompt Engineering, MCP} \\
+     \textbf{DevOps}{: Azure DevOps, GitHub Actions, Jenkins, Git} \\
+     \textbf{Infrastructure \& Tools}{: AWS, GCP, Docker, Terraform} \\
+     \textbf{Domain}{: Personal \& Business Banking, Credit Cards, Compliance \& Legal techology, Retail}
+    }}
+ \end{itemize}
+
+%-----------AREAS OF EXPERTISE-----------
+\section{Areas of Expertise}
+\begin{multicols}{3} % The '2' specifies two columns
+  \begin{compactitemize}
+    \item Platform Engineering
+    \item AI-Assisted Engineering
+    \item Enterprise CI/CD Platforms
+    \item Engineering Excellence \& Productivity
+    \item Enterprise Architecture
+    \item Risk Management
+    \item Program \& Project Management
+    \item Cross-Functional Team Leadership
+  \end{compactitemize}
+\end{multicols}
+
+%-----------ACTIVITIES & RECOGNITION-----------
+\section{Activities \& Recognition}
+\begin{itemize}[topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt]
+  \item Author of multiple published books on test automation and software engineering practices.
+  \item Frequent conference speaker on DevOps, platform engineering, and AI in software delivery.
+  \item Active industry contributor through engineering leadership content and community engagement.
+\end{itemize}
+
+%-----------CERTIFICATIONS-----------
+% \section{Certifications}
+% \resumeItemListStart
+%   \resumeItem{Natural Language Processing Nanodegree, Udacity}
+%   \resumeItem{Deep Learning Specialization, DeepLearning.AI}
+%   \resumeItem{Machine Learning Nanodegree, Udacity}
+% \resumeItemListEnd
+
+%-----------PROJECTS-----------
+% \section{Projects}
+%     \resumeSubHeadingListStart
+%       \resumeProjectHeading
+%           {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+%           \resumeItemListStart
+%             \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
+%             \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+%             \resumeItem{Visualized GitHub data to show collaboration}
+%             \resumeItem{Used Celery and Redis for asynchronous tasks}
+%           \resumeItemListEnd
+%       \resumeProjectHeading
+%           {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+%           \resumeItemListStart
+%             \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
+%             \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
+%             \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
+%             \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+%           \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
